@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 public record ImperialDate(CheckNumber checkNum, int year, int yearFraction, int millennium) {
   /** How many years in the future. 2025 -> 41013 */
   // ToDo Make this a variable somewhere for customization.
-  private static long YEARS_IN_THE_FUTURE = 39078;
+  private static long YEARS_IN_THE_FUTURE = 38988;
 
   /** Construct an ImperialDate from a {@link LocalDate} and checkNum (see {@link CheckNumber} */
   public static ImperialDate of(final LocalDate localDate, int checkNum) {

@@ -24,14 +24,14 @@ class ImperialDateTest {
     assertEquals("0001001M3", new ImperialDate(CheckNumber.ON_TERRA, 1, 1, 3).toString());
   }
 
-  /** Test the different factory methods all create equal objects */
+  /** Test the different factory methods all create equal objects. Expecting 2025 -> 41013 */
   @Test
   @DisplayName("Test of() methods")
   void testOfMethods() {
-    ImperialDate fromLocalDate = ImperialDate.of(LocalDate.of(42121, 4, 8), 5);
-    ImperialDate fromLocalDateTime = ImperialDate.of(LocalDateTime.of(42121, 4, 8, 0, 0), 5);
+    ImperialDate fromLocalDate = ImperialDate.of(LocalDate.of(41013, 4, 8), 5);
+    ImperialDate fromLocalDateTime = ImperialDate.of(LocalDateTime.of(41013, 4, 8, 0, 0), 5);
     ImperialDate fromPresentLocalDateTime =
-        ImperialDate.futureDateOf(LocalDateTime.of(3033, 4, 8, 0, 0), 5);
+        ImperialDate.futureDateOf(LocalDateTime.of(2025, 4, 8, 0, 0), 5);
 
     assertTrue(fromLocalDate.equals(fromLocalDateTime));
     assertTrue(fromPresentLocalDateTime.equals(fromLocalDateTime));
